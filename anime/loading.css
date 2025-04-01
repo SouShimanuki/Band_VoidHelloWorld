@@ -1,0 +1,26 @@
+/* ローディング画面のスタイル */
+.js-loading-screen {
+    position        : fixed;               /* 画面全体を覆う */
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: #000;                /* 背景色（お好みで変更可能） */
+    display         : flex;                /* テキストを中央に配置 */
+    justify-content : center;              /* 水平方向中央揃え */
+    align-items     : center;              /* 垂直方向中央揃え */
+    z-index         : 1000;                /* 他のコンテンツよりも前面に表示 */
+    transition      : opacity 1s ease-out; /* スムーズなフェードアウト */
+}
+
+.js-loading-text {
+    color           : #fff;                /* テキストの色 */
+    font-size       : 2em;                 /* テキストのサイズ */
+    font-family     : monospace;           /* テキストのフォント（お好みで変更可能） */
+}
+
+                                        /* ローディング画面を非表示にするアニメーション */
+.js-fade-out {
+    opacity         : 0;                   /* 透明にする */
+    pointer-events  : none;                /* クリックを無効化 */
+}

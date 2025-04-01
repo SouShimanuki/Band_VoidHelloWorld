@@ -1,0 +1,287 @@
+@charset "UTF-8";
+/*-----------------------------*/
+/* ルール(仮)                   */
+/*  - cssはclassを使用          */
+/*  - cssでidを使用しない        */
+/*  - jsのclassには[js-]をつける */
+/*-----------------------------*/
+
+/*----------------------------*/
+/* 共通部                      */
+/*----------------------------*/
+html {
+  font-size: 100%; /* em 文字相対に起因 */
+}
+
+body { /* body部分の共通CSS */
+  font-family     : "M PLUS Rounded 1c", serif; /* フォント */
+  line-height     : 1.7;                        /* 文字間隔 */
+  font-weight     : 400;                        /* 文字太さ */
+  font-style      : normal;                     /* 文字スタイル */
+  color           : #000;                     /* 文字カラー */
+}
+
+a { /* aタグ共通 */
+  text-decoration: none; /* text装飾(下線等) */
+}
+
+img { /* img共通タグ */
+  max-width: 100%; /* 最大幅 */
+}
+
+
+/*----------------------------*/
+/* hedder                     */
+/*  -最大画面サイズ1100px(要検討) */
+/*----------------------------*/
+.wrapper { /* 共通部 */
+  max-width: 2400px; /* 最大横幅サイズ */
+  margin   : 0 auto; /* box内余白 */
+  padding  : 0 4%;   /* box外余白 */
+}
+
+/*----------------------------*/
+/* hedder-home                */
+/*----------------------------*/
+.page-header { /* headder サイドに要素を配置 */
+  display        : flex;          /* flex */
+  justify-content: space-between; /* 揃え方向 */
+}
+
+.main-nav { /* ナビゲーション(横並び) */
+  display        : flex;      /* flex */
+  font-size      : 1.25rem;   /* フォントサイズ */
+  text-transform : uppercase; /* 大文字指定 */
+  margin-top     : 24px;      /* box内側上余白 */
+  list-style     : none;      /* list見出し文字([・]など) */
+}
+
+.main-nav li { /* ナビゲーション要素 */
+  margin-left: 36px; /* box内左余白(要素間幅) */
+}
+
+.main-nav a { /* ナビゲーションaタグ(リンク) */
+  color: #fff;
+}
+
+.main-nav a:hover { /* ナビゲーションaタグ(リンク) */
+  color: #0bd;
+}
+
+.home { /* home img */
+  background-image   : url(img/artistPhoto.png); /* img */
+  min-height         : 100vh;      /* 画面縦方向の全体化 */
+  background-size    : cover;      /* box内最大化 */
+  background-position: center top; /* 配置位置 */
+  background-repeat  : no-repeat;  /* 繰り返し表示抑止 */
+}
+
+/*----------------------------*/
+/* main contents 共通         */
+/*----------------------------*/
+.grid {
+  display              : grid;
+  gap                  : 10px 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top           : 5px;
+  margin-bottom        : 10px;
+  justify-content      : center;
+}
+
+/*----------------------------*/
+/* about contents             */
+/*----------------------------*/
+.about-title{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #0bd; /* 下線 */
+}
+
+.about1 {
+  position     : relative;
+  margin       : 2em 0 0 0;
+  padding      : 0.5em 0.5em;
+  border       : solid 3px #0bd;
+  border-radius: 8px;
+}
+.about1 .box-title {
+  position     : absolute;
+  display      : inline-block;
+  top          : -13px;
+  left         : 10px;
+  padding      : 0 9px;
+  line-height  : 1;
+  font-size    : 19px;
+  background   : #FFF;
+  color        : #0bd;
+  font-weight  : bold;
+}
+
+.about1 p {
+  color        : #555;
+  margin       : 0; 
+  padding      : 0;
+}
+
+.about2 {
+  position     : relative;
+  margin       : 2em 0 0 0;
+  padding      : 0.5em 0.5em;
+  border       : solid 3px #bd0;
+  border-radius: 8px;
+}
+.about2 .box-title {
+  position     : absolute;
+  display      : inline-block;
+  top          : -13px;
+  left         : 10px;
+  padding      : 0 9px;
+  line-height  : 1;
+  font-size    : 19px;
+  background   : #FFF;
+  color        : #bd0;
+  font-weight  : bold;
+}
+
+.about2 p {
+  color        : #555;
+  margin       : 0; 
+  padding      : 0;
+}
+
+.about3 {
+  position     : relative;
+  margin       : 2em 0 0 0;
+  padding      : 0.5em 0.5em;
+  border       : solid 3px #b0d;
+  border-radius: 8px;
+}
+.about3 .box-title {
+  position     : absolute;
+  display      : inline-block;
+  top          : -13px;
+  left         : 10px;
+  padding      : 0 9px;
+  line-height  : 1;
+  font-size    : 19px;
+  background   : #FFF;
+  color        : #b0d;
+  font-weight  : bold;
+}
+
+.about3 p {
+  color        : #555;
+  margin       : 0; 
+  padding      : 0;
+}
+
+.about-contents a { /* ナビゲーションaタグ(リンク) */
+  color: #888;
+}
+
+.about-contents a:hover { /* ナビゲーションaタグ(リンク) */
+  color: #000;
+}
+
+/*----------------------------*/
+/* schedule contents          */
+/*----------------------------*/
+.schedule-title{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid purple; /* 下線 */
+}
+
+/*----------------------------*/
+/* music contents             */
+/*----------------------------*/
+.music-title{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid blue; /* 下線 */
+}
+
+.music-contents .item iframe {
+  width: 100%;         /* 親要素の幅に合わせる */
+  height: auto;
+  aspect-ratio: 16 / 9; /* 16:9のアスペクト比を維持 */
+  border: none;
+}
+
+/*----------------------------*/
+/* LIVE contents              */
+/*----------------------------*/
+.live-title{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid green; /* 下線 */
+}
+
+.live-contents .item iframe {
+  width: 100%;         /* 親要素の幅に合わせる */
+  height: auto;
+  aspect-ratio: 16 / 9; /* 16:9のアスペクト比を維持 */
+  border: none;
+}
+
+/*----------------------------*/
+/* SNS(X) contents            */
+/*----------------------------*/
+.sns-title{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid orange; /* 下線 */
+}
+
+/*----------------------------*/
+/* footer                     */
+/*----------------------------*/
+footer{
+  background-color: #432; /* 背景色 */
+  text-align      : center; /* テキスト位置 */
+  padding         : 12px 0; /* box外配置 */
+}
+footer p {
+  color    : #fff;   /* 文字色 */
+  font-size: 0.875rem; /* 文字サイズ */
+}
+
+/*----------------------------*/
+/* Media (スマホ対応)           */
+/*----------------------------*/
+@media (max-width:600px)
+{
+  .page-title{
+    font-size: 1.0rem;
+  }
+
+  .page-header{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .main-nav{
+    margin:0 20px;
+  }
+
+  .home-content{
+    margin-top: 20%;
+  }
+
+  .home { /* home img */
+    background-image   : url(img/artistPhoto_mobile.png); /* img */
+    min-height         : 100vh;      /* 画面縦方向の全体化 */
+    background-size    : cover;      /* box内最大化 */
+    background-position: center; /* 配置位置 */
+    background-repeat  : no-repeat;  /* 繰り返し表示抑止 */
+  }
+}
